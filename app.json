@@ -1,16 +1,12 @@
 {
     "name": "Nibs",
     "description": "Customer loyalty application",
-    "addons": ["heroku-postgresql:hobby-dev"],
     "env": {
-        "STAGING_DATABASE_URL": {
+        "DATABASE_URL": {
             "required": true
         },
         "CONTACTS_ACCOUNT_ID" : {
             "required": true
         }
-    },
-    "scripts": {
-        "postdeploy": "pg_dump -c -Ox $STAGING_DATABASE_URL | psql $DATABASE_URL && bundle exec rake db:migrate"
     }
 }
