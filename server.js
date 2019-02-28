@@ -11,7 +11,7 @@ var express = require('express'),
     offers = require('./server/offers'),
     products = require('./server/products'),
     users = require('./server/users'),
-//    cases = require('./server/cases'),
+    //cases = require('./server/cases'),
     wallet = require('./server/wallet'),
     wishlist = require('./server/wishlist'),
     stores = require('./server/stores'),
@@ -49,8 +49,8 @@ app.put('/users/me', auth.validateToken, users.updateProfile);
 
 app.get('/offers', auth.validateToken, offers.getAll);
 app.get('/offers/:id', offers.getById);
-app.get('/products', auth.validateToken, products.getAll);
-app.get('/products/:id', auth.validateToken, products.getById);
+app.get('/products', products.getAll);
+app.get('/products/:id', products.getById);
 app.get('/stores', stores.findAll);
 
 app.get('/wallet', auth.validateToken, wallet.getItems);
