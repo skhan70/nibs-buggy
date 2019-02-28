@@ -3,7 +3,7 @@
     "description": "Customer loyalty application",
     "addons": ["heroku-postgresql:hobby-dev"],
     "env": {
-        "$STAGING_DATABASE_URL": {
+        "STAGING_DATABASE_URL": {
             "required": true
         },
         "CONTACTS_ACCOUNT_ID" : {
