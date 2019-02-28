@@ -3,7 +3,7 @@
     "description": "Customer loyalty application",
     "addons": ["heroku-postgresql:hobby-dev"],
     "env": {
-        "DATABASE_URL": {
+        "$STAGING_DATABASE_URL": {
             "required": true
         },
         "CONTACTS_ACCOUNT_ID" : {
@@ -11,6 +11,6 @@
         }
     },
     "scripts": {
-        "postdeploy": "pg_dump -cOx $DATABASE_URL | psql $DATABASE_URL && bundle exec rails db:migrate"
+        "postdeploy": "pg_dump -Ox $STAGING_DATABASE_URL | psql $DATABASE_URL && bundle exec rake db:migrate"
     }
 }
