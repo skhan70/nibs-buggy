@@ -11,6 +11,6 @@
         }
     },
     "scripts": {
-        "postdeploy": "pg_dump -Ox $STAGING_DATABASE_URL | psql $DATABASE_URL && bundle exec rake db:migrate"
+        "postdeploy": "pg_dump -c -Ox $STAGING_DATABASE_URL | psql $DATABASE_URL && bundle exec rake db:migrate"
     }
 }
