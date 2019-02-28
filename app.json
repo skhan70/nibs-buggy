@@ -1,7 +1,7 @@
 {
     "name": "Nibs",
     "description": "Customer loyalty application",
-    "addons": ["heroku-postgresql:hobby-dev", "herokuconnect:demo"],
+    "addons": ["heroku-postgresql:hobby-dev"],
     "env": {
         "DATABASE_URL": {
             "required": true
