@@ -1,5 +1,16 @@
 {
     "name": "Nibs",
     "description": "Customer loyalty application",
-    "addons": ["heroku-postgresql:hobby-dev"]
+    "addons": ["heroku-postgresql:hobby-dev", "herokuconnect:demo"],
+    "env": {
+        "DATABASE_URL": {
+            "required": true
+        },
+        "CONTACTS_ACCOUNT_ID" : {
+            "required": true
+        }
+    },
+    "scripts": {
+        "postdeploy": "pg_dump -cOx $DATABASE_URL | psql $DATABASE_URL && bundle exec rails db:migrate"
+    }
 }
