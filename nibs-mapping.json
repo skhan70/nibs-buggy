@@ -4,9 +4,9 @@
       "object_name": "Campaign",
       "config": {
         "sf_max_daily_api_calls": 30000,
-        "sf_polling_seconds": 3600,
-        "sf_notify_enabled": false,
-        "access": "read_only",
+        "sf_polling_seconds": 120,
+        "sf_notify_enabled": true,
+        "access": "read_write",
         "fields": {
           "LastViewedDate": {},
           "LastModifiedDate": {},
@@ -161,8 +161,8 @@
       "object_name": "Interaction__c",
       "config": {
         "sf_max_daily_api_calls": 30000,
-        "sf_polling_seconds": 3600,
-        "sf_notify_enabled": false,
+        "sf_polling_seconds": 120,
+        "sf_notify_enabled": true,
         "access": "read_write",
         "fields": {
           "LastViewedDate": {},
@@ -203,7 +203,7 @@
     {
       "object_name": "Product2",
       "config": {
-        "sf_polling_seconds": 3600,
+        "sf_polling_seconds": 120,
         "access": "read_only",
         "applied_at": "2019-02-28T06:39:19.405965Z",
         "sf_notify_enabled": false,
@@ -247,8 +247,8 @@
       "config": {
         "sf_max_daily_api_calls": 30000,
         "sf_polling_seconds": 600,
-        "sf_notify_enabled": false,
-        "access": "read_only",
+        "sf_notify_enabled": true,
+        "access": "read_write",
         "fields": {
           "LastViewedDate": {},
           "LastModifiedDate": {},
